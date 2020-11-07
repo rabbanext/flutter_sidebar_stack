@@ -5,6 +5,7 @@ import 'package:flutter_sidebar_stack/menu_dashboard_layout/dashboard.dart';
 import 'package:flutter_sidebar_stack/ui/pages/messages_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/my_cards_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/backlog_page.dart';
+import 'package:flutter_sidebar_stack/ui/pages/rtlh_page.dart';
 
 import 'menu.dart';
 
@@ -18,7 +19,7 @@ class MenuDashboardLayout extends StatefulWidget {
 class _MenuDashboardLayoutState extends State<MenuDashboardLayout> with SingleTickerProviderStateMixin {
   bool isCollapsed = true;
   double screenWidth, screenHeight;
-  final Duration duration = const Duration(milliseconds: 300);
+  final Duration duration = const Duration(milliseconds: 200);
   AnimationController _controller;
   Animation<double> _scaleAnimation;
   Animation<double> _menuScaleAnimation;
@@ -106,6 +107,8 @@ class _MenuDashboardLayoutState extends State<MenuDashboardLayout> with SingleTi
       return 1;
     } else if (navigationState is BacklogPage) {
       return 2;
+    } else if (navigationState is RtlhPage) {
+      return 3;
     } else {
       return 0;
     }

@@ -70,6 +70,21 @@ class Menu extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
+                GestureDetector(
+                  onTap: () {
+                    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.RtlhClickedEvent);
+                    onMenuItemClicked();
+                  },
+                  child: Text(
+                    "RTLH",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: selectedIndex == 3 ? FontWeight.w900 : FontWeight.normal,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30),
                 Text("Funds Transfer", style: TextStyle(color: Colors.white, fontSize: 22)),
                 SizedBox(height: 30),
                 Text("Branches", style: TextStyle(color: Colors.white, fontSize: 22)),

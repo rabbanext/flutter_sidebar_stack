@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sidebar_stack/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:flutter_sidebar_stack/menu_dashboard_layout/dashboard.dart';
-import 'package:flutter_sidebar_stack/ui/pages/messages_page.dart';
+import 'package:flutter_sidebar_stack/ui/pages/pengembang_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/my_cards_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/backlog_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/rtlh_page.dart';

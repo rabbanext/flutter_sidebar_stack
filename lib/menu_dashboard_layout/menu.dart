@@ -72,7 +72,7 @@ class Menu extends StatelessWidget {
                 SizedBox(height: 30),
                 GestureDetector(
                   onTap: () {
-                    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.MessagesClickedEvent);
+                    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.PengembangClickedEvent);
                     onMenuItemClicked();
                   },
                   child: Text(

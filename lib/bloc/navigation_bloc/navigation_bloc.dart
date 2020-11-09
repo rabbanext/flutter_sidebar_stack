@@ -1,14 +1,14 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_sidebar_stack/ui/pages/messages_page.dart';
+import 'package:flutter_sidebar_stack/ui/pages/pengembang_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/my_cards_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/backlog_page.dart';
 import 'package:flutter_sidebar_stack/ui/pages/rtlh_page.dart';
 
 enum NavigationEvents {
   DashboardClickedEvent,
-  MessagesClickedEvent,
   BacklogClickedEvent,
   RtlhClickedEvent,
+  PengembangClickedEvent,
 }
 
 abstract class NavigationStates {}
@@ -31,11 +31,6 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
           onMenuTap: onMenuTap,
         );
       break;
-      case NavigationEvents.MessagesClickedEvent:
-        yield MessagesPage(
-          onMenuTap: onMenuTap,
-        );
-      break;
       case NavigationEvents.BacklogClickedEvent:
         yield BacklogPage(
           onMenuTap: onMenuTap,
@@ -43,6 +38,11 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
       break;
       case NavigationEvents.RtlhClickedEvent:
         yield RtlhPage(
+          onMenuTap: onMenuTap,
+        );
+        break;
+      case NavigationEvents.MessagesClickedEvent:
+        yield PengembangPage(
           onMenuTap: onMenuTap,
         );
         break;

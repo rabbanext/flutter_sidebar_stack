@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sidebar_stack/bloc/navigation_bloc/navigation_bloc.dart';
 
-class MessagesPage extends StatefulWidget with NavigationStates {
+class PengembangPage extends StatefulWidget with NavigationStates {
   final Function onMenuTap;
 
-  const MessagesPage({Key key, this.onMenuTap}) : super(key: key);
+  const PengembangPage({Key key, this.onMenuTap}) : super(key: key);
 
   @override
-  _MessagesPageState createState() => _MessagesPageState();
+  _PengembangPageState createState() => _PengembangPageState();
 }
 
-class _MessagesPageState extends State<MessagesPage> {
+class _PengembangPageState extends State<PengembangPage> {
   var dts = DTS();
   int _rowPerPage = PaginatedDataTable.defaultRowsPerPage;
   @override

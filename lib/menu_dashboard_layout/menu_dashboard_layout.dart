@@ -103,11 +103,11 @@ class _MenuDashboardLayoutState extends State<MenuDashboardLayout> with SingleTi
   int findSelectedIndex(NavigationStates navigationState) {
     if (navigationState is MyCardsPage) {
       return 0;
-    } else if (navigationState is MessagesPage) {
-      return 1;
     } else if (navigationState is BacklogPage) {
-      return 2;
+      return 1;
     } else if (navigationState is RtlhPage) {
+      return 2;
+    } else if (navigationState is PengembangPage) {
       return 3;
     } else {
       return 0;

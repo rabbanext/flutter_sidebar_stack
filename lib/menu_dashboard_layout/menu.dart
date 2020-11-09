@@ -42,21 +42,6 @@ class Menu extends StatelessWidget {
                 SizedBox(height: 30),
                 GestureDetector(
                   onTap: () {
-                    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.MessagesClickedEvent);
-                    onMenuItemClicked();
-                  },
-                  child: Text(
-                    "Messages",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: selectedIndex == 1 ? FontWeight.w900 : FontWeight.normal,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 30),
-                GestureDetector(
-                  onTap: () {
                     BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.BacklogClickedEvent);
                     onMenuItemClicked();
                   },
@@ -65,7 +50,7 @@ class Menu extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
-                      fontWeight: selectedIndex == 2 ? FontWeight.w900 : FontWeight.normal,
+                      fontWeight: selectedIndex == 1 ? FontWeight.w900 : FontWeight.normal,
                     ),
                   ),
                 ),
@@ -80,14 +65,25 @@ class Menu extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
-                      fontWeight: selectedIndex == 3 ? FontWeight.w900 : FontWeight.normal,
+                      fontWeight: selectedIndex == 2 ? FontWeight.w900 : FontWeight.normal,
                     ),
                   ),
                 ),
                 SizedBox(height: 30),
-                Text("Funds Transfer", style: TextStyle(color: Colors.white, fontSize: 22)),
-                SizedBox(height: 30),
-                Text("Branches", style: TextStyle(color: Colors.white, fontSize: 22)),
+                GestureDetector(
+                  onTap: () {
+                    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.MessagesClickedEvent);
+                    onMenuItemClicked();
+                  },
+                  child: Text(
+                    "Pengembang",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: selectedIndex == 3 ? FontWeight.w900 : FontWeight.normal,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

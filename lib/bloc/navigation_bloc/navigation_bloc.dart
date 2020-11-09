@@ -41,7 +41,7 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
           onMenuTap: onMenuTap,
         );
         break;
-      case NavigationEvents.MessagesClickedEvent:
+      case NavigationEvents.PengembangClickedEvent:
         yield PengembangPage(
           onMenuTap: onMenuTap,
         );

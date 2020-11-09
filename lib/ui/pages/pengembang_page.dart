@@ -11,8 +11,6 @@ class PengembangPage extends StatefulWidget with NavigationStates {
 }
 
 class _PengembangPageState extends State<PengembangPage> {
-  var dts = DTS();
-  int _rowPerPage = PaginatedDataTable.defaultRowsPerPage;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,27 +22,3 @@ class _PengembangPageState extends State<PengembangPage> {
     );
   }
 }
-
-class DTS extends DataTableSource {
-  @override
-  DataRow getRow(int index) {
-    return DataRow.byIndex(selected: true, index: index, cells: [
-      DataCell(Text("#baris $index, kolom 1"), showEditIcon: true,),
-      DataCell(Text("#baris $index, kolom 2")),
-      DataCell(Text("#baris ke-$index, kolom 3")),
-      DataCell(Text("#baris $index, kolom 4")),
-    ]);
-  }
-
-  @override
-  bool get isRowCountApproximate => true;
-
-  @override
-
-  int get rowCount => 100;
-
-  @override
-  int get selectedRowCount => 0;
-}
-
-

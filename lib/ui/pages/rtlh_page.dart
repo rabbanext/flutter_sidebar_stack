@@ -43,13 +43,13 @@ class _RtlhPageState extends State<RtlhPage> {
                 ),
                 SizedBox(height: 20),
                 PaginatedDataTable(
-                  header: Text('Header Text'),
+                  header: Text('Data RTLH'),
                   rowsPerPage: 10,
                   columns: [
-                    DataColumn(label: Text('Header A')),
-                    DataColumn(label: Text('Header B')),
-                    DataColumn(label: Text('Header C')),
-                    DataColumn(label: Text('Header D')),
+                    DataColumn(label: Text('Kabupaten')),
+                    DataColumn(label: Text('Kelurahan')),
+                    DataColumn(label: Text('RLH')),
+                    DataColumn(label: Text('RTLH')),
                   ],
                   source: _DataSource(context),
                 ),

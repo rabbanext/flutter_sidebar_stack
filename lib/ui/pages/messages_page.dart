@@ -17,47 +17,8 @@ class _MessagesPageState extends State<MessagesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          physics: ClampingScrollPhysics(),
-          child: Container(
-            padding: const EdgeInsets.only(left: 16, right: 16, top: 48),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    InkWell(
-                      child: Icon(Icons.menu, color: Colors.black),
-                      onTap: widget.onMenuTap,
-                    ),
-                    Text("Messages", style: TextStyle(fontSize: 24, color: Colors.black)),
-                    Icon(Icons.settings, color: Colors.black),
-                  ],
-                ),
-                PaginatedDataTable(
-                  sortColumnIndex: 0,
-                  sortAscending: true,
-                  header: Text("Data Table Header"),
-                  columns: [
-                    DataColumn(label: Text("Kolom 1")),
-                    DataColumn(label: Text("Kolom 2")),
-                    DataColumn(label: Text("Kolom 3")),
-                    DataColumn(label: Text("Kolom 4")),
-                  ],
-                  source: dts,
-                  onRowsPerPageChanged: (r){
-                    setState(() {
-                      _rowPerPage = r;
-                    });
-                  },
-                  rowsPerPage: _rowPerPage,
-                ),
-              ],
-            ),
-          ),
+        child: Container(
+
         ),
       ),
     );

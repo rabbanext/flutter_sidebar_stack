@@ -79,7 +79,7 @@ class MyCardsPage extends StatelessWidget with NavigationStates {
               ),
               SizedBox(height: 20),
               Text(
-                "History",
+                "Activity",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               SizedBox(height: 20),
@@ -97,7 +97,7 @@ class MyCardsPage extends StatelessWidget with NavigationStates {
                   separatorBuilder: (context, index) {
                     return Divider(height: 12);
                   },
-                  itemCount: 15,
+                  itemCount: 5,
                 ),
               ),
             ],
